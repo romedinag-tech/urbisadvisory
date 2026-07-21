@@ -44,28 +44,44 @@ npm run dev
 
 **No** toques los HTML. Edita el bloque `@theme` de `src/input.css` y recompila. La fuente de verdad de la paleta es `../MARCA_URBIS.md`.
 
-## Publicar en urbisadvisory.com
+## Repositorios
 
-El repositorio ya trae `.github/workflows/deploy.yml`: **el CSS se compila solo en GitHub Actions** en cada push a `main`. No necesitas correr npm para publicar.
+| Repo | Uso | Dominio |
+|---|---|---|
+| `romedinag-tech/urbisadvisory` | **Vista previa** — para ir revisando avances. Es el remoto actual. | `romedinag-tech.github.io/urbisadvisory/` |
+| *(por definir)* | Portal definitivo | `urbisadvisory.com` |
 
-**Pasos, una sola vez:**
+El repositorio trae `.github/workflows/deploy.yml`: **el CSS se compila solo en GitHub Actions** en cada push a `main`. No necesitas correr npm para publicar.
 
-1. Crear el repo y subir:
-   ```bash
-   git init
-   git add .
-   git commit -m "Sitio Urbis Advisory v2"
-   git branch -M main
-   git remote add origin https://github.com/romedinag-tech/urbisadvisory-web.git
-   git push -u origin main
-   ```
-2. En GitHub → **Settings → Pages → Source: GitHub Actions**.
-3. En **Squarespace (DNS)**, apuntar el dominio a GitHub Pages:
+### Ver la vista previa en línea
+
+1. En GitHub → **Settings → Pages → Source: GitHub Actions**.
+2. Esperar a que termine la Action (pestaña *Actions*).
+3. Abrir `https://romedinag-tech.github.io/urbisadvisory/`.
+
+> Todas las rutas del sitio son **relativas**, así que funciona igual en un subdirectorio (`/urbisadvisory/`) que en la raíz del dominio.
+
+### Pasar al dominio definitivo
+
+1. Crear el archivo `CNAME` en la raíz con una línea: `urbisadvisory.com`.
+   *(Se quitó a propósito del repo de vista previa para no reclamar el dominio antes de tiempo.)*
+2. En **Squarespace (DNS)**, apuntar el dominio a GitHub Pages:
    - Registros **A** de `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - **CNAME** `www` → `romedinag-tech.github.io`
-4. En GitHub Pages, activar **Enforce HTTPS**.
+3. En GitHub Pages, activar **Enforce HTTPS**.
+4. Revisar que `sitemap.xml`, `robots.txt` y las etiquetas `og:url` apunten al dominio final.
 
 > 🚨 **No tocar los registros MX ni los TXT de SPF/DKIM/DMARC.** Esos son del correo de `urbisadvisory.com` y romperlos deja a Rodrigo sin correo. Solo se modifican los A/CNAME del sitio.
+
+## Flujo de trabajo
+
+```bash
+# tras editar archivos
+npm run build          # si cambiaste clases o el tema
+git add -A
+git commit -m "..."
+git push               # la Action recompila y publica
+```
 
 ## Video del hero
 
