@@ -13,6 +13,8 @@ Colores oficiales en `../../MARCA_URBIS.md`: navy `#0F2A47` · salvia `#5E8C5A` 
 
 | Archivo | Uso |
 |---|---|
+| `urbis-logo.svg` | **Logotipo horizontal completo** (isotipo + "urbis advisory"). Para documentos, presentaciones, membretes y firmas de correo. |
+| `urbis-logo-blanco.svg` | El mismo, para fondos oscuros. |
 | `urbis-isotipo.svg` | **Isotipo principal.** Fondos claros. Trama completa. |
 | `urbis-isotipo-blanco.svg` | Fondos oscuros (tinta `#0A1A2E`). El cuadrado va en `#16324F` para no perderse contra el fondo. |
 | `urbis-isotipo-mono.svg` | Un solo color (navy). Documentos en blanco y negro, sellos, grabados. |
@@ -33,17 +35,24 @@ Esto es deliberado. Si alguien regenera los PNG, debe respetar esa distinción.
 
 ---
 
-## Pendiente: la tipografía del wordmark
+## Tipografía
 
-⏳ **Rodrigo va a indicar la fuente** del wordmark "urbis".
+✅ **Outfit** para el wordmark y los titulares · **Inter** para el cuerpo de texto.
+Ambas libres (SIL OFL) y auto-alojadas en `../fonts/`. Detalle en `../../MARCA_URBIS.md`.
 
-Mientras tanto, en el sitio **"urbis advisory" se renderiza como texto HTML**, no como imagen. Esto es a propósito:
+### Por qué hay dos formas del wordmark
 
-- Se ve nítido en cualquier pantalla y a cualquier zoom.
-- Los buscadores y los lectores de pantalla leen el nombre de la empresa.
-- Cuando llegue la fuente definitiva, se cambia en **un solo lugar** (`src/input.css`, variable `--font-sans`) y se actualiza en todo el sitio.
+| Dónde | Cómo | Por qué |
+|---|---|---|
+| **En el sitio web** | Texto HTML con la fuente Outfit | Se ve nítido a cualquier zoom, y buscadores y lectores de pantalla leen el nombre de la empresa. |
+| **En `urbis-logo.svg`** | Letras convertidas a **trazos** | No depende de tener Outfit instalada: se ve igual en cualquier computador, Word, PowerPoint o imprenta. |
 
-Cuando la fuente esté confirmada, se puede generar además `urbis-logo.svg` (logotipo horizontal completo con las letras convertidas a trazos), útil para documentos y presentaciones donde no se pueda instalar la tipografía.
+Las dos deben verse idénticas. Si algún día se cambia la tipografía, hay que regenerar el SVG.
+
+### Cómo se generó el logotipo
+
+Con `fontTools`, extrayendo los contornos de `../fonts/outfit.woff2` (peso 700 para "urbis", 600 para "advisory").
+**"ADVISORY" va justificada al ancho exacto de "urbis"** — el tracking se calcula, no se elige a ojo. Si se regenera, mantener esa regla.
 
 ## Cómo regenerar los PNG
 
