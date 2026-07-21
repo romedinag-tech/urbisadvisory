@@ -85,10 +85,16 @@ navegando a cada URL y capturando la pantalla (se hicieron con las herramientas 
 - Dominio registrado en Squarespace; DNS administrado ahí. `CNAME` ya incluido en el repo.
 - El sitio v1 (one-pager en CSS vanilla) quedó archivado en `_v1-anterior/`, fuera de publicación.
 
+### Tipografía (definida)
+- **Outfit** para wordmark y titulares (`--font-display`); **Inter** para el cuerpo (`--font-sans`).
+- Auto-alojadas en `assets/fonts/` como WOFF2 variables subseteados. **No** enlazar Google Fonts: se eligió auto-alojar por privacidad frente a clientes públicos.
+- Se precargan en el `<head>`. Si se agregan páginas, copiar también los dos `<link rel="preload">`.
+
 ### Pendientes conocidos
-- [x] ~~Logo~~ ✅ **Isotipo definido (dirección A "Trama urbana"), con sus variantes y favicons.** Ver `assets/marca/LEEME.md`.
-- [ ] **Tipografía del wordmark**: Rodrigo la va a indicar. El tema declara Inter pero no carga webfont (cae a la fuente del sistema). Al confirmarla se cambia solo `--font-sans` en `src/input.css`.
-- [ ] `urbis-logo.svg` (logotipo horizontal con las letras en trazos), una vez definida la tipografía.
+- [x] ~~Logo~~ ✅ Isotipo "Trama urbana" con variantes y favicons. Ver `assets/marca/LEEME.md`.
+- [x] ~~Tipografía~~ ✅ Outfit + Inter, auto-alojadas.
+- [ ] `urbis-logo.svg` — logotipo horizontal con las letras convertidas a trazos, para documentos y presentaciones donde no se pueda instalar Outfit.
+- [ ] Confirmar el baseline definitivo ("Datos que conectan ciudades, territorios y decisiones").
 - [ ] **Formulario de contacto**: hoy la página usa correo y teléfono directos. Para un formulario real hace falta un servicio externo (ej. Formspree), porque el sitio es estático y no tiene backend.
 - [ ] Capturas reales de los 4 dashboards para la página de productos.
 - [ ] Ilustración de portada, si se decide sumarla al video.
