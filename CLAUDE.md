@@ -86,9 +86,9 @@ navegando a cada URL y capturando la pantalla (se hicieron con las herramientas 
 - El sitio v1 (one-pager en CSS vanilla) quedó archivado en `_v1-anterior/`, fuera de publicación.
 
 ### Pendientes conocidos
-- [ ] **Logo definitivo.** Los SVG en `assets/marca/` son provisionales — ver `assets/marca/LEEME.md`.
-- [ ] **Tipografía**: el tema declara Inter pero no se carga webfont (cae a la fuente del sistema). Definir al confirmar la fuente del wordmark.
-- [ ] **Favicon** derivado del ícono simplificado, cuando llegue.
+- [x] ~~Logo~~ ✅ **Isotipo definido (dirección A "Trama urbana"), con sus variantes y favicons.** Ver `assets/marca/LEEME.md`.
+- [ ] **Tipografía del wordmark**: Rodrigo la va a indicar. El tema declara Inter pero no carga webfont (cae a la fuente del sistema). Al confirmarla se cambia solo `--font-sans` en `src/input.css`.
+- [ ] `urbis-logo.svg` (logotipo horizontal con las letras en trazos), una vez definida la tipografía.
 - [ ] **Formulario de contacto**: hoy la página usa correo y teléfono directos. Para un formulario real hace falta un servicio externo (ej. Formspree), porque el sitio es estático y no tiene backend.
 - [ ] Capturas reales de los 4 dashboards para la página de productos.
 - [ ] Ilustración de portada, si se decide sumarla al video.

@@ -1,37 +1,50 @@
-# Archivos de marca
+# Archivos de marca — Urbis Advisory
 
-## ⚠️ Estado actual: PROVISIONALES
+**Dirección elegida: A · "Trama urbana"** (decidida el 21-07-2026).
 
-Los SVG que están aquí (`urbis-isotipo.svg`, `urbis-isotipo-blanco.svg`) son **marcadores de posición** hechos por Claude para que el sitio funcione. **Deben reemplazarse por los archivos definitivos** que genera Rodrigo en su herramienta de diseño.
+Grilla de calles + una ruta que la cruza en diagonal + un nodo ámbar en la intersección.
+Lectura: ciudad y territorio (la trama), movilidad y logística (la ruta), la decisión (el nodo).
 
-## Qué falta entregar
+Colores oficiales en `../../MARCA_URBIS.md`: navy `#0F2A47` · salvia `#5E8C5A` (sobre oscuro `#8FBF8B`) · ámbar `#D98E3D`.
 
-Ideal: **3 archivos SVG** y yo derivo el resto.
+---
 
-| Archivo | Qué es |
+## Archivos
+
+| Archivo | Uso |
 |---|---|
-| `urbis-logo.svg` | Logo completo horizontal (isotipo + "urbis advisory") |
-| `urbis-isotipo.svg` | Solo el símbolo, cuadrado |
-| `urbis-hero.svg` | Ilustración de portada (ciudad + tren + ruta) |
+| `urbis-isotipo.svg` | **Isotipo principal.** Fondos claros. Trama completa. |
+| `urbis-isotipo-blanco.svg` | Fondos oscuros (tinta `#0A1A2E`). El cuadrado va en `#16324F` para no perderse contra el fondo. |
+| `urbis-isotipo-mono.svg` | Un solo color (navy). Documentos en blanco y negro, sellos, grabados. |
+| `favicon.svg` | Ícono para navegador. Mismas líneas, engrosadas para que no se emborronen. |
+| `favicon-32.png` · `favicon-16.png` | Respaldo PNG. **El de 16 px usa una trama aligerada** (una calle horizontal y una vertical): la trama completa se ensucia a ese tamaño. |
+| `apple-touch-icon.png` | 180 px, **sin esquinas redondeadas** — iOS aplica su propia máscara. |
+| `urbis-icono-512.png` | 512 px, para redes sociales, perfiles y avatar de correo. |
 
-Si la herramienta solo exporta PNG, entonces con **fondo transparente** (PNG-24 con alfa):
+## Ajuste óptico por tamaño
 
-| Archivo | Tamaño | Color |
-|---|---|---|
-| `urbis-logo-color.png` | ≥ 2000 px de ancho | Full color |
-| `urbis-logo-blanco.png` | ≥ 2000 px | Todo blanco (fondos oscuros) |
-| `urbis-logo-navy.png` | ≥ 2000 px | Monocromo navy |
-| `urbis-isotipo-color.png` | 1024 × 1024 | Full color |
-| `urbis-isotipo-blanco.png` | 1024 × 1024 | Blanco |
-| `urbis-icono-simple.png` | 512 × 512 | **Símbolo simplificado**, legible a 16 px (favicon) |
-| `urbis-hero.png` | ≥ 2000 px | Full color |
+No es el mismo dibujo escalado: el ícono tiene **dos niveles de detalle**.
 
-**Las dos críticas:** la versión `-blanco` (el sitio tiene secciones oscuras) y `urbis-icono-simple` (favicon y avatar).
+- **Grande (isotipo):** trama de 2×2 calles, líneas finas al 40% de opacidad.
+- **Chico (favicon):** mismas 2×2 calles pero más gruesas y con más contraste.
+- **16 px:** solo una calle horizontal y una vertical.
 
-## Cómo reemplazarlos
+Esto es deliberado. Si alguien regenera los PNG, debe respetar esa distinción.
 
-Deja los archivos en esta carpeta con esos nombres y avisa. Hay que actualizar las referencias en los `.html` y generar el favicon.
+---
 
-## Colores oficiales
+## Pendiente: la tipografía del wordmark
 
-Ver `../../MARCA_URBIS.md`. Resumen: navy `#0F2A47` · salvia `#5E8C5A` · ámbar `#D98E3D` · hueso `#F7F6F3` · tinta `#0A1A2E`.
+⏳ **Rodrigo va a indicar la fuente** del wordmark "urbis".
+
+Mientras tanto, en el sitio **"urbis advisory" se renderiza como texto HTML**, no como imagen. Esto es a propósito:
+
+- Se ve nítido en cualquier pantalla y a cualquier zoom.
+- Los buscadores y los lectores de pantalla leen el nombre de la empresa.
+- Cuando llegue la fuente definitiva, se cambia en **un solo lugar** (`src/input.css`, variable `--font-sans`) y se actualiza en todo el sitio.
+
+Cuando la fuente esté confirmada, se puede generar además `urbis-logo.svg` (logotipo horizontal completo con las letras convertidas a trazos), útil para documentos y presentaciones donde no se pueda instalar la tipografía.
+
+## Cómo regenerar los PNG
+
+Requiere `sharp` (ya está en las dependencias de desarrollo). Se genera con un script corto de Node que rasteriza el SVG a los tamaños indicados. Pídeselo a Claude Code si hace falta rehacerlos.
