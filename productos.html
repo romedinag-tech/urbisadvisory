@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejemplos de productos — Urbis Advisory</title>
+<meta name="description" content="Cuatro plataformas propias de analítica territorial y de transporte, en operación: transporte público GPS, ciudades y suelo, comercio exterior y encuestas origen-destino.">
+<link rel="icon" href="assets/marca/urbis-isotipo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="dist/styles.css">
+</head>
+<body class="font-sans">
+
+<a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:m-3 focus:rounded focus:bg-navy focus:px-4 focus:py-2 focus:text-hueso">Saltar al contenido</a>
+
+<header class="sticky top-0 z-50 border-b border-linea bg-hueso/90 backdrop-blur">
+  <div class="mx-auto flex h-16 max-w-[1240px] items-center justify-between px-6">
+    <a href="index.html" class="flex items-center gap-2.5" aria-label="Urbis Advisory, inicio">
+      <img src="assets/marca/urbis-isotipo.svg" alt="" class="h-9 w-9" width="36" height="36">
+      <span class="leading-none">
+        <span class="block text-xl font-extrabold tracking-tight text-navy">urbis</span>
+        <span class="block text-[0.55rem] font-semibold uppercase tracking-[0.34em] text-salvia">advisory</span>
+      </span>
+    </a>
+    <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
+      <a href="quienes-somos.html" class="text-sm font-medium text-texto transition hover:text-salvia">Quiénes somos</a>
+      <a href="que-hacemos.html" class="text-sm font-medium text-texto transition hover:text-salvia">Qué hacemos</a>
+      <a href="productos.html" class="text-sm font-bold text-navy" aria-current="page">Ejemplos de productos</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contacto.html" class="hidden rounded-md bg-ambar px-5 py-2.5 text-sm font-bold text-tinta transition hover:brightness-105 sm:inline-block">Contacto</a>
+      <button type="button" id="menu-btn" class="md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+        <svg class="h-6 w-6 text-navy" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="menu-movil" class="hidden border-t border-linea bg-hueso px-6 py-4 md:hidden" aria-label="Móvil">
+    <a href="quienes-somos.html" class="block py-2 text-sm font-medium text-texto">Quiénes somos</a>
+    <a href="que-hacemos.html" class="block py-2 text-sm font-medium text-texto">Qué hacemos</a>
+    <a href="productos.html" class="block py-2 text-sm font-medium text-texto">Ejemplos de productos</a>
+    <a href="contacto.html" class="mt-2 inline-block rounded-md bg-ambar px-5 py-2.5 text-sm font-bold text-tinta">Contacto</a>
+  </nav>
+</header>
+
+<main id="contenido">
+  <section class="bg-tinta">
+    <div class="mx-auto max-w-[1240px] px-6 py-16 md:py-20">
+      <p class="eyebrow-dark">Ejemplos de productos</p>
+      <h1 class="mt-3 max-w-[22ch] text-4xl font-extrabold leading-[1.08] tracking-tight text-white md:text-5xl">
+        Cuatro plataformas propias, en operación
+      </h1>
+      <p class="mt-5 max-w-[64ch] text-lg leading-relaxed text-claro">
+        No son maquetas: están construidas, funcionando y abiertas para explorar. Son la materia prima
+        que permite entregar análisis en plazos cortos.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-[1240px] px-6 py-16">
+    <div class="grid gap-12 lg:grid-cols-12">
+
+      <aside class="lg:col-span-3" aria-label="Contacto">
+        <div class="space-y-10 lg:sticky lg:top-24">
+          <div>
+            <h2 class="eyebrow mb-3">Contacto</h2>
+            <ul class="space-y-1.5 text-sm text-texto">
+              <li><a href="mailto:rmedina@urbisadvisory.com" class="font-semibold text-navy underline-offset-4 hover:underline">rmedina@urbisadvisory.com</a></li>
+              <li><a href="tel:+56989234728" class="hover:text-salvia">+56 9 8923 4728</a></li>
+              <li class="text-suave">Concepción, Región del Biobío</li>
+            </ul>
+            <a href="contacto.html" class="mt-4 inline-block text-sm font-semibold text-salvia underline-offset-4 hover:underline">Escríbenos →</a>
+          </div>
+          <div>
+            <h2 class="eyebrow mb-3">Plataformas</h2>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#tpgc" class="text-suave hover:text-salvia">Transporte público GC</a></li>
+              <li><a href="#ciudades" class="text-suave hover:text-salvia">Ciudades y tendencias</a></li>
+              <li><a href="#comex" class="text-suave hover:text-salvia">Comercio exterior</a></li>
+              <li><a href="#eod" class="text-suave hover:text-salvia">EOD Chile</a></li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-linea bg-panel p-5">
+            <p class="text-sm font-bold text-navy">¿Necesitas un análisis a medida?</p>
+            <p class="mt-2 text-xs leading-relaxed text-suave">Sobre estas bases construimos informes y tableros específicos para tu decisión.</p>
+            <a href="contacto.html" class="mt-3 inline-block text-sm font-semibold text-salvia underline-offset-4 hover:underline">Pedir propuesta →</a>
+          </div>
+        </div>
+      </aside>
+
+      <div class="lg:col-span-9 space-y-14">
+
+        <article id="tpgc" class="scroll-mt-24 overflow-hidden rounded-2xl border border-linea bg-white">
+          <div class="border-b border-linea bg-panel px-7 py-5">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-salvia">Movilidad</p>
+            <h2 class="mt-1 text-xl font-extrabold tracking-tight text-navy md:text-2xl">Transporte público del Gran Concepción</h2>
+          </div>
+          <div class="px-7 py-6">
+            <p class="max-w-[66ch] text-base leading-relaxed text-suave">
+              Analítica sobre <strong class="font-semibold text-texto">302 millones de registros GPS</strong> del
+              transporte público, en tiempo real e histórico. Permite contrastar lo que se prometió —frecuencias
+              y recorridos— con lo que efectivamente ocurre en la calle.
+            </p>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-teal"></span>Velocidad, frecuencia y cumplimiento por servicio y tramo horario.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-teal"></span>Cobertura territorial y equidad en el acceso.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-teal"></span>Respaldo para fiscalización y controversias con operadores.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-teal"></span>Insumo para evaluación de impacto de medidas.</p>
+            </div>
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              <a href="https://romedinag-tech.github.io/transportepublicoGC/" target="_blank" rel="noopener" class="btn-primary">Abrir plataforma</a>
+              <span class="text-xs text-suave">Fuente: GPS de transporte público</span>
+            </div>
+          </div>
+        </article>
+
+        <article id="ciudades" class="scroll-mt-24 overflow-hidden rounded-2xl border border-linea bg-white">
+          <div class="border-b border-linea bg-panel px-7 py-5">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-salvia">Ciudad y suelo</p>
+            <h2 class="mt-1 text-xl font-extrabold tracking-tight text-navy md:text-2xl">Ciudades y tendencias de Chile</h2>
+          </div>
+          <div class="px-7 py-6">
+            <p class="max-w-[66ch] text-base leading-relaxed text-suave">
+              Integra datos del <strong class="font-semibold text-texto">SII a nivel de manzana</strong> con Censo
+              y CASEN para las <strong class="font-semibold text-texto">345 comunas</strong> del país. Muestra
+              cómo crece cada ciudad, dónde se concentra la inversión y cómo se valoriza el suelo.
+            </p>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-verde"></span>Dónde gana o pierde población cada sector.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-verde"></span>Densificación frente a expansión de la mancha urbana.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-verde"></span>Evolución del avalúo fiscal y las contribuciones.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-verde"></span>Base para planes reguladores y localización de inversiones.</p>
+            </div>
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              <a href="https://romedinag-tech.github.io/ciudades_y_tendencias_de_Chile/" target="_blank" rel="noopener" class="btn-primary">Abrir plataforma</a>
+              <span class="text-xs text-suave">Fuentes: SII · Censo · CASEN</span>
+            </div>
+          </div>
+        </article>
+
+        <article id="comex" class="scroll-mt-24 overflow-hidden rounded-2xl border border-linea bg-white">
+          <div class="border-b border-linea bg-panel px-7 py-5">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-salvia">Logística</p>
+            <h2 class="mt-1 text-xl font-extrabold tracking-tight text-navy md:text-2xl">Comercio exterior de Chile</h2>
+          </div>
+          <div class="px-7 py-6">
+            <p class="max-w-[66ch] text-base leading-relaxed text-suave">
+              Declaraciones de Aduanas (DUS/DIN) organizadas por punto de transferencia. Permite
+              caracterizar cada puerto y su área de influencia.
+            </p>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-azul"></span>Volúmenes de exportación e importación por punto de salida.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-azul"></span>Hinterland: de dónde viene la carga de cada puerto.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-azul"></span>Tendencias en el tiempo por producto y origen.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-azul"></span>Soporte para due diligence y negociación de contratos.</p>
+            </div>
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              <a href="https://romedinag-tech.github.io/comercio-exterior-chile/" target="_blank" rel="noopener" class="btn-primary">Abrir plataforma</a>
+              <span class="text-xs text-suave">Fuente: Servicio Nacional de Aduanas</span>
+            </div>
+          </div>
+        </article>
+
+        <article id="eod" class="scroll-mt-24 overflow-hidden rounded-2xl border border-linea bg-white">
+          <div class="border-b border-linea bg-panel px-7 py-5">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-salvia">Demanda de viajes</p>
+            <h2 class="mt-1 text-xl font-extrabold tracking-tight text-navy md:text-2xl">EOD Chile — Encuestas Origen-Destino</h2>
+          </div>
+          <div class="px-7 py-6">
+            <p class="max-w-[66ch] text-base leading-relaxed text-suave">
+              Todas las Encuestas Origen-Destino del país reunidas en un repositorio, con un
+              <strong class="font-semibold text-texto">modelo calibrado</strong> de generación, distribución
+              y partición modal de viajes.
+            </p>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-violeta"></span>Quién viaja, cuándo, por qué motivo y en qué modo.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-violeta"></span>Comparación entre ciudades y entre períodos.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-violeta"></span>Insumo directo para modelación y evaluación de proyectos.</p>
+              <p class="flex gap-3 text-sm leading-relaxed text-suave"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-dato-violeta"></span>Base para estimar a quiénes afecta una medida.</p>
+            </div>
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              <a href="https://romedinag-tech.github.io/EOD-Chile/" target="_blank" rel="noopener" class="btn-primary">Abrir plataforma</a>
+              <span class="text-xs text-suave">Fuente: Encuestas Origen-Destino oficiales</span>
+            </div>
+          </div>
+        </article>
+
+        <section class="rounded-2xl bg-tinta p-8 md:p-12">
+          <h2 class="max-w-[26ch] text-2xl font-extrabold leading-tight tracking-tight text-white md:text-3xl">
+            De la plataforma al informe que necesitas
+          </h2>
+          <p class="mt-4 max-w-[60ch] text-base leading-relaxed text-claro">
+            Estas plataformas son la base. Sobre ellas construimos el análisis específico para tu decisión:
+            un informe a medida, un respaldo técnico para un escrito o un tablero de seguimiento.
+          </p>
+          <a href="contacto.html" class="btn-primary mt-7">Pedir una propuesta</a>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-linea bg-tinta">
+  <div class="mx-auto max-w-[1240px] px-6 py-12">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div>
+        <div class="flex items-center gap-2.5">
+          <img src="assets/marca/urbis-isotipo-blanco.svg" alt="" class="h-8 w-8" width="32" height="32">
+          <span class="leading-none">
+            <span class="block text-lg font-extrabold tracking-tight text-white">urbis</span>
+            <span class="block text-[0.5rem] font-semibold uppercase tracking-[0.34em] text-salvia-claro">advisory</span>
+          </span>
+        </div>
+        <p class="mt-4 max-w-[34ch] text-sm leading-relaxed text-claro">Datos que conectan ciudades, territorios y decisiones.</p>
+      </div>
+      <nav class="text-sm" aria-label="Pie">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-salvia-claro">Sitio</p>
+        <ul class="space-y-2 text-claro">
+          <li><a href="quienes-somos.html" class="hover:text-white">Quiénes somos</a></li>
+          <li><a href="que-hacemos.html" class="hover:text-white">Qué hacemos</a></li>
+          <li><a href="productos.html" class="hover:text-white">Ejemplos de productos</a></li>
+          <li><a href="contacto.html" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="text-sm">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-salvia-claro">Contacto</p>
+        <ul class="space-y-2 text-claro">
+          <li><a href="mailto:rmedina@urbisadvisory.com" class="hover:text-white">rmedina@urbisadvisory.com</a></li>
+          <li><a href="tel:+56989234728" class="hover:text-white">+56 9 8923 4728</a></li>
+          <li>Concepción, Región del Biobío</li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-10 border-t border-white/10 pt-6 text-xs text-claro">© <span id="year"></span> Urbis Advisory · Medina Consultoría SpA · RUT 78.398.141-6</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  (function(){var b=document.getElementById('menu-btn'),m=document.getElementById('menu-movil');
+  b.addEventListener('click',function(){var o=m.classList.toggle('hidden')===false;b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');});})();
+</script>
+</body>
+</html>

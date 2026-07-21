@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* ===========================================================
+   URBIS ADVISORY — tema de marca
+   Fuente de verdad: ../MARCA_URBIS.md (Opción A: Navy + Salvia)
+   No cambiar estos valores sin actualizar también ese archivo.
+   =========================================================== */
+@theme {
+  /* --- Paleta de marca --- */
+  --color-tinta: #0a1a2e;
+  --color-navy: #0f2a47;
+  --color-salvia: #5e8c5a;
+  --color-salvia-claro: #8fbf8b;
+  --color-ambar: #d98e3d;
+  --color-hueso: #f7f6f3;
+  --color-panel: #efede8;
+  --color-linea: #e0ddd6;
+  --color-texto: #14283f;
+  --color-suave: #5c6b73;
+  --color-claro: #b7c4d4;
+
+  /* --- Paleta de datos (solo gráficos y secciones dashboard) --- */
+  --color-dato-teal: #17a398;
+  --color-dato-verde: #6fa96b;
+  --color-dato-ambar: #d98e3d;
+  --color-dato-azul: #3e86c4;
+  --color-dato-violeta: #8a6fb5;
+  --color-dato-arcilla: #c96f4f;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-hueso);
+    color: var(--color-texto);
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Foco visible y consistente para navegación por teclado */
+  :focus-visible {
+    outline: 2px solid var(--color-ambar);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Antetítulo de sección */
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-salvia;
+  }
+  .eyebrow-dark {
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-salvia-claro;
+  }
+  /* Botones */
+  .btn-primary {
+    @apply inline-block rounded-md bg-ambar px-6 py-3 text-sm font-bold text-tinta transition hover:brightness-105;
+  }
+  .btn-outline {
+    @apply inline-block rounded-md border-[1.5px] border-navy px-6 py-3 text-sm font-semibold text-navy transition hover:bg-navy hover:text-hueso;
+  }
+  .btn-outline-light {
+    @apply inline-block rounded-md border-[1.5px] border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10;
+  }
+  /* Enlace del rail lateral */
+  .rail-link {
+    @apply flex items-start gap-3 border-t border-linea py-3 transition;
+  }
+}
+
+/* Respeta a quien pide menos movimiento: se oculta el video y queda el poster */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
