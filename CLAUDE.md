@@ -32,12 +32,19 @@ Tipografía: sans-serif del sistema (Arial/Helvetica/Inter). Titulares en peso b
 
 Marca: mostrar **"Urbis"** con fuerza y **"Advisory"** en menor tamaño. Nombre de fantasía correcto: **Urbis Advisory** (ojo con la ortografía: a-d-v-i-s-o-r-y).
 
-## Las 4 plataformas (el corazón del sitio)
+## Las 3 plataformas que se muestran en el sitio
 
-1. **Transporte público Gran Concepción** — analítica GPS, 302 M registros, tiempo real + histórico → https://romedinag-tech.github.io/transportepublicoGC/
-2. **Ciudades y tendencias de Chile** — SII (manzana) + Censo + CASEN, 345 comunas → https://romedinag-tech.github.io/ciudades_y_tendencias_de_Chile/
-3. **Comercio exterior de Chile** — DUS/DIN de Aduanas por punto de transferencia → https://romedinag-tech.github.io/comercio-exterior-chile/
-4. **EOD Chile** — Encuestas Origen-Destino en un repositorio + modelo calibrado → https://romedinag-tech.github.io/EOD-Chile/
+1. **Ciudades y tendencias de Chile** — SII (manzana) + Censo + CASEN, 345 comunas → https://romedinag-tech.github.io/ciudades_y_tendencias_de_Chile/
+2. **Comercio exterior de Chile** — DUS/DIN de Aduanas por punto de transferencia → https://romedinag-tech.github.io/comercio-exterior-chile/
+3. **EOD Chile** — Encuestas Origen-Destino en un repositorio + modelo calibrado → https://romedinag-tech.github.io/EOD-Chile/
+
+> ⛔ **El dashboard de Transporte público Gran Concepción (GPS en vivo) NO va en el sitio.**
+> Decisión de Rodrigo del 21-07-2026. La plataforma existe y sigue siendo un activo del negocio
+> (ver `0 Contexto Claude/CONTEXTO.md`), pero **no se publica ni se enlaza desde la web**. No volver a agregarla.
+> Por lo mismo, la cifra "302 M registros GPS" se retiró de la franja de cifras del inicio: su respaldo público era ese tablero.
+
+Las capturas de las plataformas viven en `assets/dashboards/`. Se pueden regenerar en cualquier momento
+navegando a cada URL y capturando la pantalla (se hicieron con las herramientas de Chrome DevTools).
 
 ## Líneas de servicio a comunicar
 
